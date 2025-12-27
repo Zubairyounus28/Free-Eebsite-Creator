@@ -288,7 +288,7 @@ export function generateHTML(data: WebsiteData): string {
     <footer class="py-20 px-6 text-center opacity-40 border-t border-current/10">
         <div class="max-w-7xl mx-auto">
           <p class="text-sm font-bold uppercase tracking-[0.3em] mb-4">${data.businessName}</p>
-          <p class="text-xs">&copy; 2024. All rights reserved. Created with InstaPage AI.</p>
+          <p class="text-xs">&copy; 2024. All rights reserved. Created with Free AI Website Creator.</p>
         </div>
     </footer>
 
@@ -338,7 +338,7 @@ export async function downloadWebsiteZip(data: WebsiteData) {
   const zip = new JSZip();
   const html = generateHTML(data);
   zip.file("index.html", html);
-  zip.file("README.txt", "InstaPage AI: Fast & Professional.\n\nInstructions:\n1. Open CPanel File Manager.\n2. Go to public_html.\n3. Upload 'index.html'.\n4. Your site is live!");
+  zip.file("README.txt", "Free AI Website Creator: Fast & Professional.\n\nInstructions:\n1. Open CPanel File Manager.\n2. Go to public_html.\n3. Upload 'index.html'.\n4. Your site is live!");
 
   const content = await zip.generateAsync({ type: "blob" });
   const url = window.URL.createObjectURL(content);

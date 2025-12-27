@@ -94,7 +94,7 @@ const App: React.FC = () => {
           <div className="bg-blue-600 p-2 rounded-xl text-white">
             <Globe className="w-6 h-6" />
           </div>
-          <h1 className="text-xl font-bold text-slate-900 hidden sm:block">InstaPage AI</h1>
+          <h1 className="text-xl font-bold text-slate-900 hidden sm:block">Free AI Website Creator</h1>
         </div>
 
         <div className="flex items-center gap-2">

@@ -1,5 +1,5 @@
 {
-  "name": "InstaPage AI Builder",
+  "name": "Free AI Website Creator",
   "description": "A powerful one-page website builder that uses Gemini AI to craft compelling copy and professional templates. Design, preview, and export responsive HTML/CSS ZIP files ready for CPanel hosting.",
   "requestFramePermissions": [
     "camera"
