@@ -180,7 +180,7 @@ export function generateHTML(data: WebsiteData): string {
     <!-- Top Ticker Bar -->
     <div id="top-ticker">
       <div class="px-4 flex items-center gap-4">
-        <span>Contact for domain purchasing or more advance website <b>+923212696712 | Zubair Younus</b></span>
+        <span>Contact us for free publishing support, domain & hosting purchase, or advanced website development. <b>📞 +92 321 2696712 | Zubair Younus</b></span>
         <a href="https://wa.me/923212696712" target="_blank" class="animate-blink bg-blue-600 px-3 py-1 rounded-full text-xs font-bold text-white hover:bg-blue-500 transition-colors">Contact Now</a>
       </div>
     </div>

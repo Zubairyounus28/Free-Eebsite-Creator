@@ -74,14 +74,14 @@ const App: React.FC = () => {
       {/* Promo Ticker Bar */}
       <div className={`bg-slate-900 text-white py-2 px-4 flex items-center justify-center gap-4 text-xs sm:text-sm overflow-hidden whitespace-nowrap z-20 ${isPreviewOpen ? 'hidden' : 'flex'}`}>
         <div className="flex items-center gap-2">
-          <span className="font-medium">Contact for domain purchasing or more advance website</span>
-          <span className="font-bold text-blue-400">+923212696712 | Zubair Younus</span>
+          <span className="font-medium">Contact us for free publishing support, domain & hosting purchase, or advanced website development.</span>
+          <span className="font-bold text-blue-400">📞 +92 321 2696712 | Zubair Younus</span>
         </div>
         <a 
           href="https://wa.me/923212696712" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="bg-blue-600 hover:bg-blue-500 text-white px-3 py-1 rounded-full font-bold animate-pulse flex items-center gap-1 transition-all"
+          className="bg-blue-600 hover:bg-blue-500 text-white px-3 py-1 rounded-full font-bold animate-pulse flex items-center gap-1 transition-all flex-shrink-0"
         >
           <Phone className="w-3 h-3" />
           Contact Now
