@@ -18,7 +18,8 @@ import {
   Package,
   ChevronLeft,
   Upload,
-  X
+  X,
+  Phone
 } from 'lucide-react';
 import { WebsiteData, Product } from './types';
 import { INITIAL_DATA } from './constants.tsx';
@@ -70,6 +71,23 @@ const App: React.FC = () => {
 
   return (
     <div className="flex flex-col h-screen bg-slate-50 font-jakarta">
+      {/* Promo Ticker Bar */}
+      <div className={`bg-slate-900 text-white py-2 px-4 flex items-center justify-center gap-4 text-xs sm:text-sm overflow-hidden whitespace-nowrap z-20 ${isPreviewOpen ? 'hidden' : 'flex'}`}>
+        <div className="flex items-center gap-2">
+          <span className="font-medium">Contact for domain purchasing or more advance website</span>
+          <span className="font-bold text-blue-400">+923212696712 | Zubair Younus</span>
+        </div>
+        <a 
+          href="https://wa.me/923212696712" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="bg-blue-600 hover:bg-blue-500 text-white px-3 py-1 rounded-full font-bold animate-pulse flex items-center gap-1 transition-all"
+        >
+          <Phone className="w-3 h-3" />
+          Contact Now
+        </a>
+      </div>
+
       {/* Header - Hidden in Full Screen Preview */}
       <header className={`bg-white border-b px-6 py-4 items-center justify-between z-10 shadow-sm ${isPreviewOpen ? 'hidden' : 'flex'}`}>
         <div className="flex items-center gap-3">

@@ -110,7 +110,7 @@ export function generateHTML(data: WebsiteData): string {
           --accent: ${data.accentColor};
         }
         html { font-size: var(--base-font-size); scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; padding-top: 40px; }
         h1, h2, h3, h4 { font-family: ${config.headingFont}; }
         .primary-text { color: var(--primary); }
         .primary-bg { background-color: var(--primary); }
@@ -125,6 +125,31 @@ export function generateHTML(data: WebsiteData): string {
           opacity: 1;
           visibility: visible;
           transform: translateY(0);
+        }
+
+        @keyframes blink {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.7; transform: scale(1.05); }
+        }
+        .animate-blink {
+          animation: blink 1.5s infinite ease-in-out;
+        }
+
+        #top-ticker {
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #0f172a;
+          color: white;
+          font-size: 13px;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          z-index: 1000;
+          white-space: nowrap;
+          border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
         ${data.templateId === 'creative' ? `
@@ -152,10 +177,18 @@ export function generateHTML(data: WebsiteData): string {
     </style>
 </head>
 <body class="${config.bodyClass} relative">
+    <!-- Top Ticker Bar -->
+    <div id="top-ticker">
+      <div class="px-4 flex items-center gap-4">
+        <span>Contact for domain purchasing or more advance website <b>+923212696712 | Zubair Younus</b></span>
+        <a href="https://wa.me/923212696712" target="_blank" class="animate-blink bg-blue-600 px-3 py-1 rounded-full text-xs font-bold text-white hover:bg-blue-500 transition-colors">Contact Now</a>
+      </div>
+    </div>
+
     <div id="home" class="absolute top-0 left-0 w-px h-px pointer-events-none"></div>
 
     <!-- Header -->
-    <header id="top-nav" class="fixed top-0 w-full z-40 transition-all duration-300 ${config.navClass}">
+    <header id="top-nav" class="fixed top-[40px] w-full z-40 transition-all duration-300 ${config.navClass}">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-4">
                 <img src="${data.logoUrl}" alt="Logo" class="w-10 h-10 rounded-full object-cover ${data.templateId === 'minimalist' ? 'grayscale' : ''}">
